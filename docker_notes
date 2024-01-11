@@ -1,0 +1,13 @@
+Containers: Packages that contains application or the env to run the code. (running unit of software)
+            -> running instances of images
+
+Images: Templates/blueprints for Containers
+    -> sharable 
+    -> Contains code + required tools/runtime
+
+    -> For ex: NodeJS App Code + NodeJS Environment
+
+Finding / Creating Images
+
+    We need an image!
+        -> Use an existing, pre-built image -> head to dockerhub for pre-built images
