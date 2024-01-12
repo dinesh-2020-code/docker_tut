@@ -16,3 +16,18 @@ Finding / Creating Images
 
     We need an image!
         -> Use an existing, pre-built image -> head to dockerhub for pre-built images
+
+RUN command: will be used while building the image
+
+CMD command: executed when container is started based on the image
+
+    -> If you don't specify a CMD, the CMD of the base image will be executed. With no base image and no CMD you'd get an error
+
+
+Running a container based on our image: 
+    docker build . -> build image based on docker file
+    run the image: docker run -p <port to be listened on>:<port on which internal code is listening> <image-id>
+                ->e.g; docker run -p 3000:80 b1e878fbfb16e9e7a2cb34dc4e207b045eb71a26b5f35eadb47b664418e8c70e
+    stop the docker container: docker stop <container-name>. You can find the container-name by running "docker ps" command
+
+    
