@@ -31,3 +31,4 @@ Running a container based on our image:
     stop the docker container: docker stop <container-name>. You can find the container-name by running "docker ps" command
 
     
+    Images are read-only 
