@@ -26,6 +26,7 @@ CMD command: executed when container is started based on the image
 ------------------------------------------------------------------------------------------------
 Running a container based on our image: 
     docker build . -> build image based on docker file. '.' here signifies that the Dockerfile is in the same directory from where the commands been executing.
+    docker build . -> build image based on docker file. '.' here signifies that the Dockerfile is in the same directory from where the commands been executing.
     run the image: docker run -p <port to be listened on>:<port on which internal code is listening> <image-id>
                 ->e.g; docker run -p 3000:80 b1e878fbfb16e9e7a2cb34dc4e207b045eb71a26b5f35eadb47b664418e8c70e
     stop the docker container: docker stop <container-name>. You can find the container-name by running "docker ps" command
