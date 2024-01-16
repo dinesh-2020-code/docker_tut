@@ -73,3 +73,31 @@ docker logs <container-name>: Fetch the logs of a container.
 Attaching container again: docker logs -f angry_robinson (running the container in attach mode)
 
 docker run -it <image-id>: Run the container in interactive mode and pops up the terminal to enter the input required.
+
+--------------------------------------------------------------------------------------------------------------------------------
+        Deleting Images and Containers
+--------------------------------------------------------------------------------------------------------------------------------
+
+docker images: List all the images
+docker rmi <image-id>: Remove the image iff it is not being used by any stopped/running containers
+docker rmi <image-id1> <image-id2> <img-id3> ... <img-idn>: To remove 'n' images at once
+
+--rm flag in docker run command: automatically removes the container when it exits
+    for ex: docker run -p 3000:80 -d --rm <image-id>
+    If I stop the container by running 'docker stop <container-id>', it will remove the container as well.
+
+-> To know more about docker image, type the following command : docker image inspect <image-id>
+
+------------------------------------------------------------------------------------------------
+    Copying files Into & From a Container
+------------------------------------------------------------------------------------------------
+
+docker cp command allows to copy files into a running container or out from a running container
+    SYNTAX: docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH
+    Ex: docker cp dummy/. boring_vaughan:/test ('dummy' and 'boring_vaughan' are container names)
+
+
+------------------------------------------------------------------------------------------------
+    Naming & Tagging Containers and Images
+------------------------------------------------------------------------------------------------
+
